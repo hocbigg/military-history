@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Hocbigg - Military History</title>
+  <meta name="description" content="Path to a free self-taught education in Military History.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/military-history/">
+  <meta property="og:title" content="Hocbigg - Military History">
+  <meta property="og:description" content="Path to a free self-taught education in Military History.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/military-history/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/military-history/">Military History</a></li>
+      <li><a href="/military-history/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/military-history/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/military-history" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+<header class="page-header">
+  <img src="/images/logo.png" alt="Hocbigg logo">
+  <h1>Hocbigg - Military History</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Military History.</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-08">2026-10-08</time></small></p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Military history is often misunderstood as a narrow inventory of weapons, battle maps, and famous commanders. In serious historical inquiry, it is something much broader: the study of organized violence as a primary engine of human history. Warfare continuously interacts with state formation, economic capacity, social structures, and technological innovation. Studying military history means investigating why societies resort to arms, how states organize and sustain armies, how soldiers and commanders experience the brutal friction of combat, and how armed conflict reshapes political orders and civilian life.</p>
+<p>This curriculum is designed for independent, self-directed learners with no prior formal training in military history, strategic studies, or military service. It assumes no institutional affiliation and requires no access to paywalled academic databases or physical archives.</p>
+<p>The curriculum balances free open-access materials—including university lecture series from Yale and Coursera, public-domain primary sources from Standard Ebooks and Project Gutenberg, and verified open-access courseware—with canonical academic surveys.</p>
+<h3 id="curriculum-structure-and-progression">Curriculum Structure and Progression</h3>
+<p>The core curriculum is organized into seven subjects that form a deliberate methodological and chronological progression:</p>
+<ul>
+<li><strong>Foundations of Military History</strong> introduces the discipline's core methodologies, tracing both the macro-level interaction between war and state development and the micro-level physical and psychological realities of combat.</li>
+<li><strong>The Historical Spine (Antiquity to 1945)</strong> guides you through five sequential eras: classical Mediterranean warfare, the medieval and early modern gunpowder revolutions, the industrial and national revolutions of the nineteenth century, the total mobilization of the World Wars, and the nuclear-shadowed proxy conflicts of the post-1945 Cold War era.</li>
+<li><strong>Strategy and the Theory of War</strong> serves as an analytical capstone. While beginners are often tempted to jump directly into strategic philosophy, theorists like Sun Tzu and Carl von Clausewitz wrote in direct response to the specific operational realities of their times. Studying the historical epochs first provides the empirical grounding required to understand strategic theory as practical analysis rather than abstract aphorisms.</li>
+</ul>
+<p>Beginners should follow this sequence chronologically. Each historical period establishes the administrative, operational, and technological foundations upon which subsequent eras depend.</p>
+<h3 id="beyond-the-core">Beyond the Core</h3>
+<p>This curriculum covers only the essential foundations that every student of military history should master before choosing a specialization. Once you have completed these seven core subjects, you can branch out into specialized areas across this self-study series:</p>
+<ul>
+<li>Explore operational domains, defense analysis, and thematic subdisciplines—such as naval strategy, airpower doctrine, intelligence tradecraft, and irregular warfare—in <a href="advanced_topics.html">Advanced Topics</a>.</li>
+<li>Apply analytical frameworks to concrete deliverables—including campaign analyses, battlefield staff rides, wargame designs, service records dossiers, and book reviews—in <a href="projects.html">Projects</a>.</li>
+</ul>
+<h2 id="curriculum">Curriculum</h2>
+<p>A seven-subject core covering the foundations of the discipline, the major epochs of warfare from antiquity to the present, and the classical theory of strategy: everything a learner needs before any specialization.</p>
+<h3 id="foundations-of-military-history">Foundations of Military History</h3>
+<p>An introduction to the historiography, core concepts, and analytical methodologies of military history, examining how organized violence interacts with society, institutions, and the human experience of combat.</p>
+<p><a href="https://books.google.com/books?isbn=9781509517619" target="_blank" rel="noopener noreferrer">What is Military History? (Polity Press/Stephen Morillo and Michael F. Pavkovic)</a> - Serves as the primary theoretical baseline, introducing the evolution of the field, historiographical debates, and analytical frameworks across world history.</p>
+<p><a href="https://books.google.com/books?isbn=9780199546190" target="_blank" rel="noopener noreferrer">War in European History (Oxford University Press/Michael Howard)</a> - Complements Morillo and Pavkovic by providing a concise, macro-level chronological narrative of how military institutions evolved alongside European social and technological structures.</p>
+<p><a href="https://books.google.com/books?isbn=9780140048971" target="_blank" rel="noopener noreferrer">The Face of Battle (Penguin Books/John Keegan)</a> - Works alongside the theoretical texts as a seminal practical study, pioneering the 'face-of-battle' methodology that reconstructs combat from the physical and psychological perspective of the frontline soldier.</p>
+<h3 id="ancient-and-classical-warfare">Ancient and Classical Warfare</h3>
+<p>A survey of armed conflict from the Mediterranean Bronze Age through the fall of the Western Roman Empire, focusing on citizen-soldiery, the hoplite phalanx, the Roman legionary system, and foundational primary sources.</p>
+<p><a href="https://oyc.yale.edu/classics/clcv-205" target="_blank" rel="noopener noreferrer">Introduction to Ancient Greek History (Open Yale Courses/Donald Kagan)</a> - Provides the foundational lecture series for the era, establishing the political and strategic context of classical Greek warfare with intensive coverage of the Persian and Peloponnesian Wars.</p>
+<p><a href="https://standardebooks.org/ebooks/thucydides/history-of-the-peloponnesian-war" target="_blank" rel="noopener noreferrer">History of the Peloponnesian War (Standard Ebooks/Thucydides)</a> - The foundational primary source to read alongside Kagan's lectures, providing the ancient world's most influential analytical narrative of grand strategy, factional conflict, and inter-state war.</p>
+<p><a href="https://standardebooks.org/ebooks/julius-caesar/commentaries-on-the-gallic-war" target="_blank" rel="noopener noreferrer">Commentaries on the Gallic War (Standard Ebooks/Julius Caesar)</a> - Follows the Greek material as a complementary Roman primary text, offering an operational first-person narrative of legionary tactics, logistical organization, and field generalship.</p>
+<p><a href="https://books.google.com/books?isbn=9780520260092" target="_blank" rel="noopener noreferrer">The Western Way of War: Infantry Battle in Classical Greece (University of California Press/Victor Davis Hanson)</a> - Deepens the tactical understanding gained from Kagan and Thucydides by reconstructing the visceral physical reality, psychological conditions, and civic mechanisms of shock combat in the hoplite phalanx.</p>
+<h3 id="medieval-and-early-modern-warfare">Medieval and Early Modern Warfare</h3>
+<p>An exploration of European military developments from the feudal knight and siege warfare through the gunpowder revolution, fiscal-military state formation, and the rise of standing armies between 500 and 1800.</p>
+<p><a href="https://books.google.com/books?isbn=9780198206392" target="_blank" rel="noopener noreferrer">Medieval Warfare: A History (Oxford University Press/Maurice Keen, ed.)</a> - Establishes the foundational medieval baseline, surveying cavalry, castles, fortifications, and military institutions across Europe from the Carolingian era through the fifteenth century.</p>
+<p><a href="https://books.google.com/books?isbn=9780521479585" target="_blank" rel="noopener noreferrer">The Military Revolution: Military Innovation and the Rise of the West, 1500–1800 (Cambridge University Press/Geoffrey Parker)</a> - Directly continues Keen's timeline, explaining how the introduction of gunpowder weapons, trace italienne fortifications, and expanded bureaucratic states revolutionized early modern warfare.</p>
+<p><a href="https://www.gutenberg.org/ebooks/15772" target="_blank" rel="noopener noreferrer">The Art of War (Project Gutenberg/Niccolò Machiavelli)</a> - Acts as a contemporaneous primary companion to Keen and Parker, capturing the Renaissance transition as Machiavelli analyzes classical Roman infantry models to reform early sixteenth-century militia and gunpowder tactics.</p>
+<h3 id="war-in-the-age-of-revolutions-and-industry">War in the Age of Revolutions and Industry</h3>
+<p>An examination of how mass conscription, nationalist ideology, and the Industrial Revolution fundamentally transformed operational doctrine and the scale of warfare between 1789 and 1914.</p>
+<p><a href="https://www.coursera.org/learn/modern-world" target="_blank" rel="noopener noreferrer">The Modern World, Part One: Global History from 1760 to 1910 (Coursera/Philip Zelikow)</a> - Serves as the global macroeconomic and geopolitical anchor for the era, examining how the Atlantic revolutions, imperial expansion, and industrialization created the modern state system.</p>
+<p><a href="https://books.google.com/books?isbn=9780253202604" target="_blank" rel="noopener noreferrer">The Art of Warfare in the Age of Napoleon (Indiana University Press/Gunther E. Rothenberg)</a> - Complements Zelikow by providing a granular military study of how revolutionary conscription, the corps system, and Napoleonic staff organization altered combat operations.</p>
+<p><a href="https://oyc.yale.edu/history/hist-119" target="_blank" rel="noopener noreferrer">The Civil War and Reconstruction Era, 1845–1877 (Open Yale Courses/David Blight)</a> - Builds upon the operational and industrial concepts of the period through an exhaustive case study of the nineteenth century's first industrialized total war.</p>
+<h3 id="the-world-wars">The World Wars</h3>
+<p>A study of the two global, industrialized conflicts of the twentieth century, focusing on total mobilization, operational innovations across multiple theaters, and the humanitarian catastrophe of modern warfare.</p>
+<p><a href="https://books.google.com/books?isbn=9780375700453" target="_blank" rel="noopener noreferrer">The First World War (Vintage/John Keegan)</a> - Provides the authoritative narrative overview of the 1914–1918 conflict, synthesizing grand strategy, trench deadlock, and operational maneuvers across all fronts.</p>
+<p><a href="https://www.youtube.com/@TheGreatWar" target="_blank" rel="noopener noreferrer">The Great War (YouTube/@TheGreatWar)</a> - Serves as an exhaustive audiovisual companion to Keegan, tracking the tactical developments, technological shifts, and diplomatic events of World War I week by week in chronological order.</p>
+<p><a href="https://books.google.com/books?isbn=9780316023757" target="_blank" rel="noopener noreferrer">The Second World War (Back Bay Books/Antony Beevor)</a> - Sequentially advances the study of total war from Keegan's volume, offering a comprehensive operational and strategic synthesis of the 1939–1945 conflict across the European, Pacific, and Mediterranean theaters.</p>
+<p><a href="https://www.youtube.com/@WorldWarTwo" target="_blank" rel="noopener noreferrer">World War Two (YouTube/TimeGhost History)</a> - Pairs with Beevor's survey as a chronological video companion, covering the military campaigns, Holocaust, and home-front mobilizations of the Second World War in real-time weekly installments.</p>
+<h3 id="conflict-since-1945">Conflict since 1945</h3>
+<p>An analysis of post-World War II military history, encompassing the nuclear revolution, Cold War superpower competition, decolonization conflicts, proxy wars, and modern asymmetric doctrine.</p>
+<p><a href="https://www.coursera.org/learn/modern-world-2" target="_blank" rel="noopener noreferrer">The Modern World, Part Two: Global History since 1910 (Coursera/Philip Zelikow)</a> - Delivers the foundational historical lectures for this epoch, connecting the aftermath of the World Wars to Cold War crises, decolonization, and the post-1989 world order.</p>
+<p><a href="https://books.google.com/books?isbn=9780143038276" target="_blank" rel="noopener noreferrer">The Cold War: A New History (Penguin Books/John Lewis Gaddis)</a> - Complements Zelikow's lectures with a concise grand-strategic synthesis focused on nuclear deterrence, ideological competition, and decision-making between Washington and Moscow.</p>
+<p><a href="https://books.google.com/books?isbn=9780521703146" target="_blank" rel="noopener noreferrer">The Global Cold War: Third World Interventions and the Making of Our Times (Cambridge University Press/Odd Arne Westad)</a> - Serves as an essential counter-weight to Gaddis, shifting focus away from European diplomacy to the actual shooting wars, insurgencies, and military interventions across Asia, Africa, and Latin America.</p>
+<h3 id="strategy-and-the-theory-of-war">Strategy and the Theory of War</h3>
+<p>A capstone exploration of strategic thought and philosophy, analyzing enduring conceptual frameworks regarding the causes, conduct, logic, and limitations of organized violence.</p>
+<p><a href="https://books.google.com/books?isbn=9780521155243" target="_blank" rel="noopener noreferrer">The Evolution of Strategy: Thinking War from Antiquity to the Present (Cambridge University Press/Beatrice Heuser)</a> - Serves as the core analytical framework for the topic, tracing how strategic concepts and definitions of victory developed from ancient texts to contemporary doctrine.</p>
+<p><a href="https://books.google.com/books?isbn=9780691027647" target="_blank" rel="noopener noreferrer">Makers of Modern Strategy from Machiavelli to the Nuclear Age (Princeton University Press/Peter Paret, ed.)</a> - Complements Heuser by providing a collection of seminal scholarly essays dissecting the theories and strategic legacies of major thinkers and statesmen.</p>
+<p><a href="https://www.gutenberg.org/ebooks/132" target="_blank" rel="noopener noreferrer">The Art of War (Project Gutenberg/Sun Tzu)</a> - Foundational primary text to study alongside the theoretical histories, presenting the classical Eastern paradigm centered on deception, agility, indirect approach, and psychological victory.</p>
+<p><a href="https://www.gutenberg.org/ebooks/1946" target="_blank" rel="noopener noreferrer">On War (Project Gutenberg/Carl von Clausewitz)</a> - The seminal Western primary treatise to read in conversation with Sun Tzu, analyzing the friction of combat, the trinity of passion, chance, and reason, and war's subordination to political policy.</p>
+    </article>
+  </main>
+
+</body>
+</html>

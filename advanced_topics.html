@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics: Military History</title>
+  <meta name="description" content="Advanced Topics: Military History curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/military-history/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics: Military History">
+  <meta property="og:description" content="Advanced Topics: Military History curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/military-history/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/military-history/">Military History</a></li>
+      <li><a href="/military-history/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/military-history/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/military-history" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-military-history">Advanced Topics: Military History</h1>
+<p>Six specialization tracks for learners who have completed the core undergraduate curriculum. Learners are encouraged to select one or two tracks aligned with their specific analytical, regional, or professional interests rather than completing all tracks.</p>
+<ul>
+<li><strong>Naval and Maritime Warfare</strong> - The theory and practice of war at sea, from classical doctrines of fleet command to contemporary blue-water naval competition.</li>
+<li><strong>Air and Space Power</strong> - The doctrinal evolution of military aviation, strategic bombing debates, and the emergence of space as an operational warfighting domain.</li>
+<li><strong>Intelligence and War</strong> - The collection, analysis, failure, and operational employment of intelligence, examined through analytical tradecraft and historical case studies.</li>
+<li><strong>Irregular Warfare and Counterinsurgency</strong> - The dynamics of asymmetric conflict, spanning revolutionary guerrilla theory, colonial small wars, and modern doctrine.</li>
+<li><strong>War, Society, and Memory</strong> - The cultural, social, and institutional dimensions of organized violence, including combat trauma, collective memory, gender, and state formation.</li>
+<li><strong>Applied Methods: Wargaming, Staff Rides, and Research Practice</strong> - The professional tradecraft of the practicing military historian and defense analyst, covering conflict simulation, terrain analysis, and archival research.</li>
+</ul>
+<h2 id="naval-and-maritime-warfare">Naval and Maritime Warfare</h2>
+<p>The theory and practice of war at sea, from classical doctrines of fleet command to contemporary blue-water naval competition.</p>
+<p>Sea power theory: <a href="https://www.gutenberg.org/ebooks/13529" target="_blank" rel="noopener noreferrer">The Influence of Sea Power upon History, 1660–1783 (Alfred Thayer Mahan, Project Gutenberg)</a> - Establishes the foundational theoretical framework for command of the sea, concentration of naval force, and the geopolitical impact of maritime commerce.</p>
+<p>Limited war and maritime strategy: <a href="https://www.gutenberg.org/ebooks/15076" target="_blank" rel="noopener noreferrer">Some Principles of Maritime Strategy (Julian S. Corbett, Project Gutenberg)</a> - Provides the essential strategic counterweight to Mahan by examining sea control as a subordinate instrument of combined joint operations and limited political objectives.</p>
+<p>Fleet operations in total war: <a href="https://books.google.com/books?isbn=9781591145240" target="_blank" rel="noopener noreferrer">The Two-Ocean War: A Short History of the United States Navy in the Second World War (Samuel Eliot Morison)</a> - Synthesizes modern multi-theater fleet operations, carrier task forces, and amphibious doctrine across the Atlantic and Pacific theaters.</p>
+<p>Contemporary naval competition: <a href="https://crsreports.congress.gov/product/pdf/RL/RL33153" target="_blank" rel="noopener noreferrer">China Naval Modernization: Implications for U.S. Navy Capabilities (Ronald O'Rourke, Congressional Research Service)</a> - Examines contemporary naval shipbuilding, anti-access/area-denial doctrine, and high-end maritime deterrence in the Western Pacific.</p>
+<h2 id="air-and-space-power">Air and Space Power</h2>
+<p>The doctrinal evolution of military aviation, strategic bombing debates, and the emergence of space as an operational warfighting domain.</p>
+<p>Foundational air power theory: <a href="https://www.airuniversity.af.edu/Portals/10/AUPress/Books/B_0160_DOUHET_THE_COMMAND_OF_THE_AIR.pdf" target="_blank" rel="noopener noreferrer">The Command of the Air (Giulio Douhet, Air University Press)</a> - Presents the classical interwar thesis arguing that independent strategic aviation and civilian morale bombing can achieve decisive victory without ground combat.</p>
+<p>Operational air campaign design: <a href="https://www.airuniversity.af.edu/Portals/10/AUPress/Books/B_0065_METS_AIR_CAMPAIGN.PDF" target="_blank" rel="noopener noreferrer">The Air Campaign: John Warden and the Classical Airpower Theorists (David R. Mets, Air University Press)</a> - Traces the lineage of modern operational air doctrine from Mitchell and Douhet to John Warden's five-ring systems model used in the 1991 Gulf War.</p>
+<p>Strategic bombing assessment: <a href="https://www.airuniversity.af.edu/Portals/10/AUPress/Books/B_0020_SPANGRUD_STRATEGIC_BOMBING_SURVEYS.pdf" target="_blank" rel="noopener noreferrer">The United States Strategic Bombing Surveys (Air University Press)</a> - Delivers the primary empirical evaluations of Allied air operations against Germany and Japan, serving as the benchmark for debates on bombing efficacy.</p>
+<p>Military spacepower doctrine: <a href="https://www.starcom.spaceforce.mil/Portals/2/Space%20Force%20Doctrine%20Document%201%20FINAL_4Apr25.pdf" target="_blank" rel="noopener noreferrer">Space Force Doctrine Document 1: The Space Force (U.S. Space Force)</a> - Outlines the capstone warfighting doctrine for the orbital domain, defining orbital warfare, electromagnetic battle management, and space superiority.</p>
+<h2 id="intelligence-and-war">Intelligence and War</h2>
+<p>The collection, analysis, failure, and operational employment of intelligence, examined through analytical tradecraft and historical case studies.</p>
+<p>Cognitive tradecraft and intelligence analysis: <a href="https://www.cia.gov/resources/csi/books-monographs/psychology-of-intelligence-analysis-2/" target="_blank" rel="noopener noreferrer">Psychology of Intelligence Analysis (Richards J. Heuer Jr., CIA Center for the Study of Intelligence)</a> - Explores the psychological mechanisms, cognitive biases, and structured analytic techniques required to evaluate incomplete and ambiguous battlefield data.</p>
+<p>Signals intelligence and historical cryptanalysis: <a href="https://www.cia.gov/resources/csi/books-monographs/venona/" target="_blank" rel="noopener noreferrer">Venona: Soviet Espionage and the American Response, 1939–1957 (Robert Louis Benson and Michael Warner, CIA/NSA)</a> - Details the analytical and cryptanalytic breakthrough against encrypted Soviet communications, illustrating the strategic utility of signals intelligence.</p>
+<p>Strategic surprise and warning failure: <a href="https://books.google.com/books?isbn=9780804705981" target="_blank" rel="noopener noreferrer">Pearl Harbor: Warning and Decision (Roberta Wohlstetter)</a> - The definitive theoretical study analyzing how institutional friction, cognitive noise, and competing hypotheses obscure strategic warning signals.</p>
+<p>Military deception principles: <a href="https://www.governmentattic.org/18docs/CIAdeceptionMaximsFactFolklore_1980.pdf" target="_blank" rel="noopener noreferrer">Deception Maxims: Fact and Folklore (Office of Research and Development, Central Intelligence Agency)</a> - Distills the operational mechanics of military deception, including Magruder's principle, conditioning, and manipulating an opponent's prior expectations.</p>
+<h2 id="irregular-warfare-and-counterinsurgency">Irregular Warfare and Counterinsurgency</h2>
+<p>The dynamics of asymmetric conflict, spanning revolutionary guerrilla theory, colonial small wars, and modern doctrine.</p>
+<p>Revolutionary guerrilla strategy: <a href="https://www.marines.mil/portals/1/publications/fmfrp%2012-18%20%20mao%20tse-tung%20on%20guerrilla%20warfare.pdf" target="_blank" rel="noopener noreferrer">Mao Tse-tung on Guerrilla Warfare (trans. Samuel B. Griffith II, U.S. Marine Corps FMFRP 12-18)</a> - Establishes the three-phase political and military doctrine of protracted people's war that defined twentieth-century anti-colonial and communist revolutions.</p>
+<p>Historical small wars doctrine: <a href="https://www.marines.mil/portals/1/publications/fmfrp%2012-15%20%20small%20wars%20manual.pdf" target="_blank" rel="noopener noreferrer">Small Wars Manual, FMFRP 12-15 (United States Marine Corps)</a> - Synthesizes early-twentieth-century expeditionary experience into practical guidance on civil affairs, policing, native constabularies, and minimum force.</p>
+<p>Modern counterinsurgency doctrine: <a href="https://archive.org/details/fm-3-24-counterinsurgency-2006" target="_blank" rel="noopener noreferrer">Counterinsurgency, FM 3-24 (U.S. Army and U.S. Marine Corps, 2006)</a> - Provides the population-centric doctrine developed in response to insurgencies in Iraq and Afghanistan, emphasizing political legitimacy and host-nation governance.</p>
+<p>Organizational learning and adaptation: <a href="https://books.google.com/books?isbn=9780226567709" target="_blank" rel="noopener noreferrer">Learning to Eat Soup with a Knife: Counterinsurgency Lessons from Malaya and Vietnam (John A. Nagl)</a> - Analyzes organizational culture and institutional adaptability by comparing the British response in Malaya with the American conventional approach in Vietnam.</p>
+<p>Twenty-first-century operational analysis: <a href="https://press.armywarcollege.edu/monographs/386" target="_blank" rel="noopener noreferrer">The U.S. Army in the Iraq War, Volume 1: Invasion–Insurgency–Civil War, 2003–2006 (Joel D. Rayburn and Frank K. Sobchak, U.S. Army War College Press)</a> - Offers an exhaustive, declassified operational post-mortem on planning assumptions, transition failures, and the emergence of sectarian insurgency in Iraq.</p>
+<h2 id="war-society-and-memory">War, Society, and Memory</h2>
+<p>The cultural, social, and institutional dimensions of organized violence, including combat trauma, collective memory, gender, and state formation.</p>
+<p>Combat trauma and remembrance: <a href="https://www.open.edu/openlearn/history-the-arts/the-first-world-war-trauma-and-memory" target="_blank" rel="noopener noreferrer">The First World War: Trauma and Memory (The Open University, OpenLearn)</a> - Explores the psychiatric categorization of shell shock, physical rehabilitation, civilian grief, and the enduring memorialization of twentieth-century mass casualties.</p>
+<p>Cultural memory and literary representation: <a href="https://books.google.com/books?isbn=9780199971954" target="_blank" rel="noopener noreferrer">The Great War and Modern Memory (Paul Fussell)</a> - Examines how the horrific mechanization of the Western Front dismantled nineteenth-century heroic rhetoric and created modern ironic literary traditions.</p>
+<p>Gender and the war system: <a href="https://books.google.com/books?isbn=9780521001809" target="_blank" rel="noopener noreferrer">War and Gender: How Gender Shapes the War System and Vice Versa (Joshua S. Goldstein)</a> - Integrates biological, psychological, and sociological evidence to assess the near-universal masculine dominance of combat and how warfare reinforces gender roles.</p>
+<p>Fiscal-military state formation: <a href="https://books.google.com/books?isbn=9781557863683" target="_blank" rel="noopener noreferrer">Coercion, Capital, and European States, A.D. 990–1992 (Charles Tilly)</a> - Formulates the foundational historical-sociological argument that the logistical demands of interstate warfare drove the growth of modern taxation, debt, and state bureaucracies.</p>
+<h2 id="applied-methods-wargaming-staff-rides-and-research-practice">Applied Methods: Wargaming, Staff Rides, and Research Practice</h2>
+<p>The professional tradecraft of the practicing military historian and defense analyst, covering conflict simulation, terrain analysis, and archival research.</p>
+<p>History and theory of wargaming: <a href="https://digital-commons.usnwc.edu/newport-papers/43/" target="_blank" rel="noopener noreferrer">On Wargaming: How Wargames Have Shaped History and How They May Shape the Future (Matthew B. Caffrey Jr., Naval War College Press)</a> - Traces the development of military simulations from Prussian Kriegsspiel through modern computer-assisted games, evaluating their influence on command decisions.</p>
+<p>Practical wargame design and execution: <a href="https://assets.publishing.service.gov.uk/media/5a82e90d40f0b6230269d575/doctrine_uk_wargaming_handbook.pdf" target="_blank" rel="noopener noreferrer">Wargaming Handbook (UK Ministry of Defence, Development, Concepts and Doctrine Centre)</a> - Provides a step-by-step practitioner guide to game architecture, matrix gaming, adjudication methods, and avoiding cognitive biases in defense decision-making.</p>
+<p>Battlefield analysis and staff rides: <a href="https://www.armyupress.army.mil/Portals/7/educational-services/staff-rides/The-Staff-Ride-2020.pdf" target="_blank" rel="noopener noreferrer">The Staff Ride: Fundamentals, Experiences, Techniques (Peter G. Knight and William Glenn Robertson, Army University Press)</a> - Details the three-phase methodology (systematic preliminary study, field terrain evaluation, and post-ride integration) used to extract operational lessons from historical battlegrounds.</p>
+<p>Archival methods and official history: <a href="https://history.army.mil/Publications/Publications-Catalog/Guide-to-the-Study-and-Use-of-Military-History" target="_blank" rel="noopener noreferrer">A Guide to the Study and Use of Military History (John E. Jessup Jr. and Robert W. Coakley, U.S. Army Center of Military History)</a> - Introduces the methodological standards of military historiography, addressing the evaluation of military archives, unit records, and the institutional bias inherent in official war reporting.</p>
+    </article>
+  </main>
+
+</body>
+</html>
